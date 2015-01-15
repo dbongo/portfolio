@@ -1,0 +1,30 @@
+<div id="sidebar-wrapper">
+    <ul class="sidebar">
+        <li class="sidebar-main">
+            <a ng-click="toggleSidebar()">
+                <span class="menu-icon fa fa-bars"></span>
+            </a>
+        </li>
+        <li ui-sref-active="active" class="sidebar-list">
+            <a ui-sref="index">
+                Dashboard<span class="menu-icon fa fa-tachometer"></span>
+            </a>
+        </li>
+        <li ui-sref-active="active" class="sidebar-list">
+            <a ui-sref="tables">
+                Tables<span class="menu-icon fa fa-table"></span>
+            </a>
+        </li>
+    </ul>
+    <div class="sidebar-footer">
+        <div class="col-xs-4">
+            <a href="https://github.com/rdash/rdash-angular" target="_blank">Github</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="https://github.com/rdash/rdash-angular/README.md" target="_blank">About</a>
+        </div>
+        <div class="col-xs-4">
+            <a href="#">Support</a>
+        </div>
+    </div>
+</div>
