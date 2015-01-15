@@ -1,17 +1,20 @@
- /* #592727 RED */
- /* #2f5927 GREEN */
- /* #30426a BLUE (default)*/
-
 /* Sidebar background color */
- // @sidebarBaseColor: #30426a;
- @sidebarBaseColor: #000;
+@sidebarBaseColor: #000;
+@sidebarActiveColor: #e99d1a;
+@sidebarTextColor: #f3f3f3;
+@sidebarHoverColor: #fff;
 
- /* Sidebar header and footer color */
- @sidebarHeaderColor: lighten(@sidebarBaseColor, 10%);
- //@sidebarHeaderColor: #b2bfdc;
+/* Sidebar header and footer color */
+@headerColor: lighten(@sidebarBaseColor, 10%);
 
- /* Sidebar title text color */
- @sidebarTitleColor:  #e99d1a;
+/* Sidebar title text color */
+@menuTitleColor:  @sidebarActiveColor;
+
+/* Sidebar menu item text color */
+@menuItem: @sidebarTextColor;
 
 /* Sidebar menu item hover color */
- @sidebarMenuItemHover: #e99d1a;
+@menuItemHover: @sidebarHoverColor;
+
+/* Sidebar title text color */
+@menuItemActive:  @sidebarActiveColor;
