@@ -49,10 +49,11 @@ angular.module('hackapp')
 
     $scope.$watch($scope.getWidth, function(newValue, oldValue) {
         if (newValue >= mobileView) {
-            if (angular.isDefined($cookieStore.get('toggle')))
+            if (angular.isDefined($cookieStore.get('toggle'))) {
                 $scope.toggle = !$cookieStore.get('toggle') ? false : true
-            else
+            } else {
                 $scope.toggle = true
+            }
         } else {
             $scope.toggle = false
         }

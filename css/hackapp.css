@@ -293,7 +293,7 @@ ul.sidebar li a {
   width: 250px;
 }
 ul.sidebar li.active {
-  border-left: 3px solid #e99d1a;
+  border-left: 3px solid #d3a938;
   text-indent: 22px;
 }
 ul.sidebar li.active a {
@@ -318,7 +318,7 @@ ul.sidebar .sidebar-main .menu-icon {
   line-height: 60px;
 }
 ul.sidebar .sidebar-title {
-  color: #e99d1a;
+  color: #d3a938;
   font-size: 12px;
   height: 35px;
   line-height: 40px;
@@ -350,7 +350,7 @@ ul.sidebar .sidebar-list .menu-icon {
   bottom: 0;
 }
 #page-wrapper:not(.open) ul.sidebar li.active a span {
-  border-left: 3px solid #e99d1a;
+  border-left: 3px solid #d3a938;
 }
 #page-wrapper:not(.open) ul.sidebar .sidebar-title {
   display: none;

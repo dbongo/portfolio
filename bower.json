@@ -7,12 +7,12 @@
     "test"
   ],
   "main": [
-      "css/hackapp.css",
-      "css/hackapp.min.css",
-      "fonts/montserrat-regular-webfont.eot",
-      "fonts/montserrat-regular-webfont.svg",
-      "fonts/montserrat-regular-webfont.ttf",
-      "fonts/montserrat-regular-webfont.woff"
+    "css/hackapp.css",
+    "css/hackapp.min.css",
+    "fonts/montserrat-regular-webfont.eot",
+    "fonts/montserrat-regular-webfont.svg",
+    "fonts/montserrat-regular-webfont.ttf",
+    "fonts/montserrat-regular-webfont.woff"
   ],
   "dependencies": {
     "angular": "latest",
@@ -21,7 +21,8 @@
     "font-awesome": "latest",
     "angular-resource": "latest",
     "angular-bootstrap": "latest",
-    "angular-cookies": "latest"
+    "angular-cookies": "latest",
+    "animate.css": "~3.2.0"
   },
   "devDependencies": {
     "angular-mocks": "latest",

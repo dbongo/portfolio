@@ -1,13 +1,13 @@
 var gulp = require('gulp')
 var usemin = require('gulp-usemin')
 var livereload = require('gulp-livereload')
-var connect = require('gulp-connect')
 var minifyCss = require('gulp-minify-css')
 var minifyJs = require('gulp-uglify')
 var concat = require('gulp-concat')
 var less = require('gulp-less')
 var rename = require('gulp-rename')
 var ngAnnotate = require('gulp-ng-annotate')
+var server = require('gulp-server-livereload')
 //var minifyHTML = require('gulp-minify-html')
 
 var paths = {
@@ -19,14 +19,10 @@ var paths = {
     bower_fonts: 'src/vendor/**/*.{ttf,woff,eof,svg}',
     dist: './'
 }
-
 var app = {
-    js: paths.dist + 'js/*.js',
-    css: paths.dist + 'css/*.css',
-    html: [
-        paths.dist + 'index.html',
-        paths.dist + 'templates/*.html'
-    ]
+    js: './js/*.js',
+    css: './css/*.css',
+    html: ['./index.html', './templates/*.html']
 }
 
 /**
@@ -38,8 +34,8 @@ gulp.task('fonts', function() {
 })
 
 /**
-* Compile less
-*/
+ * Compile less
+ */
 gulp.task('less', function() {
     return gulp.src(paths.styles)
     .pipe(less())
@@ -81,7 +77,7 @@ gulp.task('copy-bower_fonts', function() {
 })
 
 /**
- * Handle custom files
+ * Handle angular dependencies
  */
 gulp.task('js', function() {
     return gulp.src(paths.scripts)
@@ -94,23 +90,28 @@ gulp.task('js', function() {
     .pipe(gulp.dest(paths.dist + 'js'))
 })
 
+/**
+ * Handle html templates
+ */
 gulp.task('templates', function() {
     return gulp.src(paths.templates)
     //.pipe(minifyHTML())
     .pipe(gulp.dest(paths.dist + 'templates'))
 })
 
-/*
-* Serve the files out of /dist
-*/
-gulp.task('connect', function() {
-    connect.server({
-        root: paths.dist,
-        livereload: true,
-        port: 8888
-    })
+/**
+ * Serve app from ./ dir
+ */
+gulp.task('webserver', function() {
+    gulp.src(paths.dist)
+    .pipe(server({
+        defaultFile: 'index.html'
+    }))
 })
 
+/**
+ * Watches src files and runs build task if changed
+ */
 gulp.task('watch', function() {
     livereload.listen()
     gulp.watch(paths.index, ['build'])
@@ -130,4 +131,4 @@ gulp.task('ui', ['fonts', 'css'])
 gulp.task('assets', ['copy-bower_fonts'])
 gulp.task('static', ['js', 'templates'])
 gulp.task('build', ['ui', 'usemin', 'assets', 'static'])
-gulp.task('default', ['build', 'watch'])
+gulp.task('default', ['build', 'watch', 'webserver'])
