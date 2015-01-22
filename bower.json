@@ -1,5 +1,5 @@
 {
-  "name": "hackapp",
+  "name": "portfolio",
   "version": "0.0.1",
   "ignore": [
     "**/.*",
@@ -7,8 +7,8 @@
     "test"
   ],
   "main": [
-    "css/hackapp.css",
-    "css/hackapp.min.css",
+    "css/portfolio.css",
+    "css/portfolio.min.css",
     "fonts/montserrat-regular-webfont.eot",
     "fonts/montserrat-regular-webfont.svg",
     "fonts/montserrat-regular-webfont.ttf",

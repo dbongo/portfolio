@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('hackapp', ['ui.bootstrap', 'ui.router', 'ngCookies'])
+angular.module('portfolio', ['ui.bootstrap', 'ui.router', 'ngCookies'])
 
-angular.module('hackapp')
+angular.module('portfolio')
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/')
 
@@ -17,7 +17,7 @@ angular.module('hackapp')
     })
 }])
 
-angular.module('hackapp')
+angular.module('portfolio')
 .controller('AlertsCtrl', ['$scope', function AlertsCtrl($scope) {
     $scope.alerts = [
         {
@@ -39,7 +39,7 @@ angular.module('hackapp')
     }
 }])
 
-angular.module('hackapp')
+angular.module('portfolio')
 .controller('MainCtrl', ['$scope', '$cookieStore', function MainCtrl($scope, $cookieStore) {
     var mobileView = 992
 
@@ -69,7 +69,7 @@ angular.module('hackapp')
     }
 }])
 
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdLoading', function rdLoading() {
     var directive = {
         restrict: 'AE',
@@ -78,7 +78,7 @@ angular.module('hackapp')
     return directive
 })
 
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdWidgetBody', function rdWidgetBody() {
     var directive = {
         requires: '^rdWidget',
@@ -93,7 +93,7 @@ angular.module('hackapp')
     return directive
 })
 
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdWidgetFooter', function rdWidgetFooter() {
     var directive = {
         requires: '^rdWidget',
@@ -104,7 +104,7 @@ angular.module('hackapp')
     return directive
 })
 
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdWidgetHeader', function rdWidgetTitle() {
     var directive = {
         requires: '^rdWidget',
@@ -119,7 +119,7 @@ angular.module('hackapp')
     return directive
 })
 
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdWidget', function rdWidget() {
     var directive = {
         transclude: true,

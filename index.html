@@ -1,25 +1,19 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="hackapp">
+<html lang="en" ng-app="portfolio">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>hackapp</title>
+    <title>portfolio</title>
     <link rel="stylesheet" href="lib/css/vendor.min.css"/>
-    <link rel="stylesheet" href="css/hackapp.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body ng-controller="MainCtrl">
-    <!-- Page Wrapper -->
     <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
-        <!-- Navigation -->
         <div ng-include="'templates/common/navigation.html'"></div>
-        <!-- Content Wrapper -->
         <div id="content-wrapper">
-            <!-- Page Content -->
             <div class="page-content">
-                <!-- Top Navbar -->
                 <div ng-include="'templates/common/topnavbar.html'"></div>
-                <!-- Main View -->
                 <div ui-view></div>
             </div>
         </div>
@@ -42,6 +36,6 @@
     ga('send', 'pageview');
     </script>
     <script src="lib/js/vendor.min.js"></script>
-    <script type="text/javascript" src="js/hackapp.js"></script>
+    <script type="text/javascript" src="js/portfolio.js"></script>
 </body>
 </html>

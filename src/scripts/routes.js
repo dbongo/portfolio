@@ -1,4 +1,4 @@
-angular.module('hackapp')
+angular.module('portfolio')
 .config(function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/')
 

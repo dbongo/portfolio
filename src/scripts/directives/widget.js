@@ -1,4 +1,4 @@
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdWidget', function rdWidget() {
     var directive = {
         transclude: true,

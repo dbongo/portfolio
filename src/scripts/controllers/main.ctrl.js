@@ -1,4 +1,4 @@
-angular.module('hackapp')
+angular.module('portfolio')
 .controller('MainCtrl', function MainCtrl($scope, $cookieStore) {
     var mobileView = 992
 

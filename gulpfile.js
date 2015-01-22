@@ -39,7 +39,7 @@ gulp.task('fonts', function() {
 gulp.task('less', function() {
     return gulp.src(paths.styles)
     .pipe(less())
-    .pipe(concat('hackapp.css'))
+    .pipe(concat('portfolio.css'))
     .pipe(gulp.dest(paths.dist + 'css'))
 })
 
@@ -47,9 +47,9 @@ gulp.task('less', function() {
  * Minify css
  */
 gulp.task('css', ['less'], function() {
-    return gulp.src('css/hackapp.css')
+    return gulp.src('css/portfolio.css')
     .pipe(minifyCss())
-    .pipe(concat('hackapp.min.css'))
+    .pipe(concat('portfolio.min.css'))
     .pipe(gulp.dest(paths.dist + 'css'))
 })
 
@@ -86,7 +86,7 @@ gulp.task('js', function() {
         add: true,
         single_quotes: true
     }))
-    .pipe(concat('hackapp.js'))
+    .pipe(concat('portfolio.js'))
     .pipe(gulp.dest(paths.dist + 'js'))
 })
 

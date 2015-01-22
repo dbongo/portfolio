@@ -1,4 +1,4 @@
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdWidgetFooter', function rdWidgetFooter() {
     var directive = {
         requires: '^rdWidget',

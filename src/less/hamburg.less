@@ -1,14 +1,15 @@
 /**
-* Hamburg Menu
-* When the class of 'hamburg' is applied to the body tag of the document,
-* the sidebar changes it's style to attempt to mimic a menu on a phone app,
-* where the content is overlaying the content, rather than push it.
-*/
+ * Hamburg Menu
+ * When the class of 'hamburg' is applied to the body tag of the document,
+ * the sidebar changes it's style to attempt to mimic a menu on a phone app,
+ * where the content is overlaying the content, rather than push it.
+ */
 @media only screen and (max-width:560px) {
     body.hamburg {
         #page-wrapper {
             padding-left: 0;
         }
+
         #page-wrapper:not(.open) {
             #sidebar-wrapper {
                 position: absolute;
@@ -18,17 +19,23 @@
                 display: none;
             }
         }
+
         #page-wrapper.open #sidebar-wrapper {
             position: fixed;
             ul.sidebar li.sidebar-main {
                 margin-left: 0px;
             }
         }
-        #sidebar-wrapper ul.sidebar li.sidebar-main, .row.header .meta {
+
+        #sidebar-wrapper ul.sidebar li.sidebar-main,
+        .row.header .meta {
             margin-left: 70px;
         }
-        #sidebar-wrapper ul.sidebar li.sidebar-main, #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main {
-            transition: margin-left .4s ease 0s;
+
+        #sidebar-wrapper ul.sidebar li.sidebar-main,
+        #page-wrapper.open #sidebar-wrapper ul.sidebar li.sidebar-main,
+        #page-wrapper.open #sidebar-wrapper ul.sidebar li.active {
+            transition: margin-left .5s ease 0s;
         }
     }
 }

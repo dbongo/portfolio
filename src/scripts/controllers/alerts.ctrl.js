@@ -1,4 +1,4 @@
-angular.module('hackapp')
+angular.module('portfolio')
 .controller('AlertsCtrl', function AlertsCtrl($scope) {
     $scope.alerts = [
         {

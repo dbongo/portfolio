@@ -1,3 +1,3 @@
 'use strict';
 
-angular.module('hackapp', ['ui.bootstrap', 'ui.router', 'ngCookies'])
+angular.module('portfolio', ['ui.bootstrap', 'ui.router', 'ngCookies'])

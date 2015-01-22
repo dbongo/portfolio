@@ -1,4 +1,4 @@
-angular.module('hackapp')
+angular.module('portfolio')
 .directive('rdLoading', function rdLoading() {
     var directive = {
         restrict: 'AE',
